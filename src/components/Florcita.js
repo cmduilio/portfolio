@@ -3,15 +3,15 @@ import { Layout, Breadcrumb } from 'antd';
 
 const { Content } = Layout;
 
-function Home() {
+function Florcita() {
     return (
         <Content style={{ padding: '0 50px' }}>
             <Breadcrumb style={{ margin: '16px 0' }}>
-                <Breadcrumb.Item>Home</Breadcrumb.Item>
+                <Breadcrumb.Item>Florcita</Breadcrumb.Item>
             </Breadcrumb>
-            <div style={{backgroundColor: "aquamarine"}}>Content of home</div>
+            <div style={{backgroundColor: "lightgreen"}}>Content of Florcita</div>
         </Content>
     );
 }
 
-export default Home;
+export default Florcita;
