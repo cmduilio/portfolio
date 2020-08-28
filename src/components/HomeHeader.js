@@ -4,9 +4,8 @@ import React from "react";
 const { Header } = Layout;
 
 function HomeHeader(){
-
     return (
-        <Header>
+        <Header style={{position: "fixed", zIndex: "1", width: "100%"}}>
             <Menu style={{float: 'right'}} theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
                 <Menu.Item key="1">
                     <Link to="/home">
