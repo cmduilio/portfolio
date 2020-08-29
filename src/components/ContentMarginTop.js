@@ -3,9 +3,10 @@ import { Layout } from 'antd';
 
 const { Content } = Layout;
 
-function ContentMarginTop({content}) {
+function ContentMarginTop({children: content}) {
+
     return (
-        <Content style={{ padding: '0 50px', marginTop: 64 }}>
+        <Content style={{ display: "flex", flexDirection: "column", padding: '0 50px', marginTop: 64 }}>
             {content}
         </Content>
     );

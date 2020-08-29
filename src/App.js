@@ -9,9 +9,8 @@ import {Layout} from "antd";
 const { Footer } = Layout;
 
 function App() {
-
     return (
-        <Layout className="layout" >
+        <Layout style={{minHeight:"100vh"}}>
             <BrowserRouter>
                 <HomeHeader/>
                 <Switch>
@@ -21,7 +20,9 @@ function App() {
                     <Route exact path='/juancito' component={Juancito}/>
                 </Switch>
             </BrowserRouter>
-            <Footer style={{ alignContent: 'bottom', textAlign: 'center' }}>Maurito Design ©2020 - Para todos los gatitos</Footer>
+            <Footer style={{ color: "lightgrey", alignContent: 'bottom', textAlign: 'center', backgroundColor:"#001529" }}>
+                Maurito Design ©2020 - Para todos los gatitos
+            </Footer>
         </Layout>
     );
 }
