@@ -1,72 +1,82 @@
-import React, { useEffect, useState } from 'react';
-import {Menu, Popover} from "antd";
-import {Link} from "react-router-dom";
+import React, { useState } from 'react';
+import {Anchor, Button, Drawer, Menu} from "antd";
+import {Link as Linko} from "react-router-dom";
+import "./ResponsiveMenu.css";
 import {MenuOutlined} from "@ant-design/icons";
+import { BackgroundDark } from "../Constants"
+const { Link } = Anchor;
 
 function ResponsiveMenu(){
-    const [float, setFloat] = useState("right");
-    const [mode, setMode] = useState("horizontal");
     const [key, setKey] = useState(1);
+    const [visible, setVisible] = useState(false);
 
     const handleClick = e => {
-        console.log('click', e);
         setKey(e.key);
     }
 
-    const [viewportWidth, setViewportWidth] = useState(19);
-    const [isMenuShown, setIsMenuShown] = useState(false);
-    const isMobile = () => viewportWidth < 600;
+    const showDrawer = () => {
+        setVisible(true);
+    };
 
-    useEffect(() => {
-        setViewportWidth(window.innerWidth);
+    const onClose = () => {
+        setVisible(false);
+    };
 
-        let isMobile = window.innerWidth < 600;
-        setFloat(isMobile ? "none" : "right");
-        setMode(isMobile ? "vertical-right" : "horizontal");
-        window.addEventListener('resize', () => {
-            setViewportWidth(window.innerWidth);
-            let isMobile = window.innerWidth < 600;
-            setFloat(isMobile ? "none" : "right");
-            setMode(isMobile ? "vertical-right" : "horizontal");
-        });
+    const menuList = [
+        {index: "1", name: "Home", link: "/home"},
+        {index: "2", name: "Florcita", link: "/florcita"},
+        {index: "3", name: "Juancito", link: "/juancito"}];
 
-        return () => window.removeEventListener('resize', () => {
-            setViewportWidth(window.innerWidth);
-            let isMobile = window.innerWidth < 600;
-            setFloat( isMobile ? "none" : "right");
-            setMode(isMobile ? "vertical-right" : "horizontal");
-        });
-    }, []);
-
-    const menu =
-        <Menu onClick={handleClick} style={{float: float}} theme="dark" mode={mode} defaultSelectedKeys={[key]}>
-            <Menu.Item key="1">
-                <Link to="/home">
-                    Home
-                </Link>
-            </Menu.Item>
-            <Menu.Item key="2">
-                <Link to="/florcita">
-                    Florcita
-                </Link>
-            </Menu.Item>
-            <Menu.Item key="3">
-                <Link to="/juancito">
-                    Juancito
-                </Link>
-            </Menu.Item>
-        </Menu>;
-
-    return (isMobile() ? <Popover overlayStyle={{color: "red"}}
-                               content={menu}
-                               visible={isMenuShown}
-                               trigger="click"
-                               onVisibleChange={setIsMenuShown}
-        >
-            <div style={{float: "right", textAlign: "center", color:"lightgrey"}}>
-                <MenuOutlined />
+    return (
+        <div>
+            <div className="mobileHidden">
+                <Menu onClick={handleClick} style={{float: "right"}} theme="dark" mode={"horizontal"} defaultSelectedKeys={[key]}>
+                    {menuList.map((element) => {
+                        return createMenuItem(element.index, element.name, element.link);
+                    })}
+                </Menu>
             </div>
-        </Popover> : menu)
+            <div className="mobileVisible">
+                <div style={{float: "right"}}>
+                    <Button type="primary" onClick={showDrawer}>
+                        <MenuOutlined/>
+                    </Button>
+                </div>
+                <Drawer
+                    placement="right"
+                    closable={false}
+                    onClose={onClose}
+                    visible={visible}
+                    bodyStyle={BackgroundDark}
+                >
+                    <Anchor style={BackgroundDark} targetOffset="65" >
+                        {menuList.map((element) => {
+                            return createLink(element.index, element.name, element.link);
+                        })}
+                    </Anchor>
+                </Drawer>
+            </div>
+        </div>)
+}
+
+function createLink(index, name, link){
+    return(
+        <Link key={index}
+              href={link}
+              title={
+                  <div className="white-text">
+                      {name}
+                  </div>}
+        />)
+}
+
+function createMenuItem(index, name, link){
+    return (
+        <Menu.Item key={index}>
+            <Linko to={link}>
+                {name}
+            </Linko>
+        </Menu.Item>)
 }
 
 export default ResponsiveMenu;
