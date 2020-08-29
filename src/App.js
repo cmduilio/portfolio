@@ -14,10 +14,10 @@ function App() {
             <BrowserRouter>
                 <HomeHeader/>
                 <Switch>
-                    <Route exact path='/' component={Home}/>
-                    <Route exact path='/home' component={Home}/>
-                    <Route exact path='/florcita' component={Florcita}/>
-                    <Route exact path='/juancito' component={Juancito}/>
+                    <Route exact path='/portfolio' component={Home}/>
+                    <Route exact path='/portfolio/home' component={Home}/>
+                    <Route exact path='/portfolio/florcita' component={Florcita}/>
+                    <Route exact path='/portfolio/juancito' component={Juancito}/>
                 </Switch>
             </BrowserRouter>
             <Footer style={{ color: "lightgrey", alignContent: 'bottom', textAlign: 'center', backgroundColor:"#001529" }}>
