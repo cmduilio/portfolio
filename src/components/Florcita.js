@@ -8,7 +8,7 @@ function Florcita() {
             <Breadcrumb style={{ margin: '16px 0' }}>
                 <Breadcrumb.Item>Florcita</Breadcrumb.Item>
             </Breadcrumb>
-            <div style={{backgroundColor: "lightgreen"}}>Content of Florcita</div>
+            <div style={{backgroundColor: "lightyellow"}}>Content of Florcita</div>
         </ContentMarginTop>
     );
 }
