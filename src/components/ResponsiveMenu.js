@@ -62,10 +62,11 @@ function ResponsiveMenu(){
 function createLink(index, name, link){
     return(
         <Link key={index}
+              href={link}
               title={
-                  <Linko to={link} className="white-text">
+                  <div className="white-text">
                       {name}
-                  </Linko>}
+                  </div>}
         />)
 }
 
