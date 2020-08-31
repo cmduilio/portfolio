@@ -23,7 +23,7 @@ function ResponsiveMenu(){
     };
 
     const menuList = [
-        {index: "1", name: "Home", link: "/home"},
+        {index: "1", name: "Home", link: "/"},
         {index: "2", name: "Florcita", link: "/florcita"},
         {index: "3", name: "Juancito", link: "/juancito"}];
 

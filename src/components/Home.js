@@ -1,7 +1,6 @@
 import React from 'react';
-import { Breadcrumb } from 'antd';
+import {Breadcrumb} from 'antd';
 import ContentMarginTop from "./ContentMarginTop";
-
 
 function Home() {
     return (
