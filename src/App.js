@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 import {BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import Home from "./components/Home";
-import Florcita from "./components/Florcita";
-import Juancito from "./components/Juancito";
+import Skills from "./components/Skills";
+import Experience from "./components/Experience";
 import HomeHeader from "./components/HomeHeader";
 import Error from "./components/Error";
 import {Layout} from "antd";
@@ -16,8 +16,8 @@ function App() {
                 <HomeHeader/>
                 <Switch>
                     <Route exact path='/' component={Home}/>
-                    <Route exact path='/florcita' component={Florcita}/>
-                    <Route exact path='/juancito' component={Juancito}/>
+                    <Route exact path='/skills' component={Skills}/>
+                    <Route exact path='/experience' component={Experience}/>
                     <Route exact path='/error' component={Error}/>
                     <Redirect from='/*' to='/error'/>
                 </Switch>

@@ -24,8 +24,8 @@ function ResponsiveMenu(){
 
     const menuList = [
         {index: "1", name: "Home", link: "/"},
-        {index: "2", name: "Florcita", link: "/florcita"},
-        {index: "3", name: "Juancito", link: "/juancito"}];
+        {index: "2", name: "Skills", link: "/skills"},
+        {index: "3", name: "Experience", link: "/experience"}];
 
     return (
         <div>
