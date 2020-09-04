@@ -11,11 +11,11 @@ function CardListFlex({list}) {
             {list.map((element) => {
                 return <Card
                     style={{ width: 250 }}
-                    cover={<Image src={profilePic}/>}
+                    cover={element.image ? <Image src={element.image}/> : null}
                 >
                 <Meta
-                    title="Mauro Duilio Candotti"
-                    description="Software Engineer papu"
+                    title={element.title}
+                    description={element.description}
                     />
             </Card>
             })}

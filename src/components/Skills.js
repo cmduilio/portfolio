@@ -9,44 +9,34 @@ import CardListFlex from "./CardListFlex";
 const listData = [];
 const Java = {
     title: "Java",
-    avatar: JavaLogo,
+    image: JavaLogo,
     description:
-        null,
-    content:
         'Knowledge in Java 8, Spark, Guice as main libraries. Gradle, maven, ' +
         'Hibernate.',
 };
 const ReactSkill = {
     title: "React",
-    avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+    image: JavaLogo,
     description:
-        null,
-    content:
         'Knowledge in Java 8, Spark, Guice as main libraries.',
 };
 const Node = {
     title: "Node",
-    avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+    image: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
     description:
-        null,
-    content:
         'Knowledge in Java 8, Spark, Guice as main libraries.',
 };
 const DB = {
     title: "DB",
-    avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+    image: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
     description:
-        '',
-    content:
         'Both relational and non-relational databases, experience in Oracle SQL,' +
         'MySQL and MongoDB.',
 };
 const Misc = {
     title: "Miscellaneous",
-    avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+    image: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
     description:
-        '',
-    content:
         'Experience in streaming data frameworks like BigQ or Kafka, ' +
         ' Clean architecture and SOLID principles.',
 };
