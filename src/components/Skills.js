@@ -1,36 +1,38 @@
 import React from 'react';
-import { Breadcrumb } from 'antd';
+import {Breadcrumb, Card, Col, Row, Space} from 'antd';
 import ContentMarginTop from "./ContentMarginTop";
 import ItemList from "./ItemList";
 import BreadcrumbItem from "antd/es/breadcrumb/BreadcrumbItem";
 import JavaLogo from "../resources/Java.png";
+import Profile from "./Profile";
+import CardListFlex from "./CardListFlex";
 const listData = [];
-AddSkill({
+const Java = {
     title: "Java",
     avatar: JavaLogo,
     description:
-        '',
+        null,
     content:
         'Knowledge in Java 8, Spark, Guice as main libraries. Gradle, maven, ' +
         'Hibernate.',
-});
-AddSkill({
+};
+const ReactSkill = {
     title: "React",
     avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
     description:
-        '',
+        null,
     content:
         'Knowledge in Java 8, Spark, Guice as main libraries.',
-});
-AddSkill({
+};
+const Node = {
     title: "Node",
     avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
     description:
-        '',
+        null,
     content:
         'Knowledge in Java 8, Spark, Guice as main libraries.',
-});
-AddSkill({
+};
+const DB = {
     title: "DB",
     avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
     description:
@@ -38,8 +40,8 @@ AddSkill({
     content:
         'Both relational and non-relational databases, experience in Oracle SQL,' +
         'MySQL and MongoDB.',
-});
-AddSkill({
+};
+const Misc = {
     title: "Miscellaneous",
     avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
     description:
@@ -47,29 +49,22 @@ AddSkill({
     content:
         'Experience in streaming data frameworks like BigQ or Kafka, ' +
         ' Clean architecture and SOLID principles.',
-});
+};
 
-function AddSkill({title, avatar, description, content}){
-    listData.push({
-        title: title,
-        avatar: avatar,
-        description: description,
-        content: content
-    })
-}
-
+listData.push(Java);
+listData.push(ReactSkill);
+listData.push(Node);
+listData.push(DB);
+listData.push(Misc);
 function Skills() {
     return (
         <ContentMarginTop>
-            <br/>
             <Breadcrumb>
                 <BreadcrumbItem>Portfolio</BreadcrumbItem>
                 <BreadcrumbItem>Skills</BreadcrumbItem>
             </Breadcrumb>
-            <br/>
-            <ItemList listData={listData} />
+            <CardListFlex list={listData}/>
         </ContentMarginTop>
-
     );
 }
 

@@ -13,7 +13,7 @@ function App() {
     return (
         <Layout style={{minHeight:"100vh"}}>
             <BrowserRouter basename="/portfolio">
-                <HomeHeader/>
+                <HomeHeader content="Mauro Duilio Candotti"/>
                 <Switch>
                     <Route exact path='/' component={Home}/>
                     <Route exact path='/skills' component={Skills}/>

@@ -1,29 +1,35 @@
 import React from 'react';
-import { List, Avatar } from 'antd';
+import {List, Divider, Avatar} from 'antd';
 
-function ItemList({listData}) {
+function ItemList({pageSize, listData}) {
+    const pagination = pageSize ?
+                 {
+                    onChange: page => {
+                        console.log(page);
+                    },
+                    pageSize: pageSize,
+                } : null;
+
     return (
         <List
-            itemLayout="vertical"
+            itemLayout="horizontal"
             size="small"
-            pagination={{
-                onChange: page => {
-                    console.log(page);
-                },
-                pageSize: 5,
-            }}
+            pagination={pagination}
             dataSource={listData}
             renderItem={item => (
-                <List.Item
-                    key={item.title}
-                >
-                    <List.Item.Meta
-                        avatar={<Avatar src={item.avatar} />}
-                        title={item.title}
-                        description={item.description}
-                    />
-                    {item.content}
-                </List.Item>
+                <>
+                    <List.Item
+                        key={item.title}
+                    >
+                        <List.Item.Meta
+                            avatar={<Avatar shape="square" src={item.avatar} />}
+                            title={item.title}
+                            description={item.description}
+                        />
+                        {item.content}
+                    </List.Item>
+                    <Divider/>
+                </>
             )}
         />
     );

@@ -4,12 +4,12 @@ import ResponsiveMenu from "./ResponsiveMenu";
 
 const { Header } = Layout;
 
-function HomeHeader(){
+function HomeHeader({content}){
 
     return (
         <Header style={{position: "fixed", zIndex: "1", width: "100%"}}>
             <div style={{float: "left", color: "lightgrey", fontSize: "large", fontWeight: "bold"}}>
-                Mauro Duilio Candotti
+                {content}
             </div>
             <ResponsiveMenu />
         </Header>
