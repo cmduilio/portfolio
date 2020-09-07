@@ -4,3 +4,6 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+.space-container > * {
+  margin: 5px 0;
+}

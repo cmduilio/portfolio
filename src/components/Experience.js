@@ -52,7 +52,8 @@ listData.push(QW);
 function Experience() {
     return (
         <ContentMarginTop>
-            <Breadcrumb style={{margin: '16px 0'}}>
+            <Breadcrumb style={{margin: '5px 0'}}>
+                <Breadcrumb.Item>Portfolio</Breadcrumb.Item>
                 <Breadcrumb.Item>Experience</Breadcrumb.Item>
             </Breadcrumb><br/>
             <ItemList listData={listData}/>

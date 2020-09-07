@@ -1,10 +1,7 @@
 import React from 'react';
-import {Breadcrumb, Card, Col, Row, Space} from 'antd';
+import {Breadcrumb} from 'antd';
 import ContentMarginTop from "./ContentMarginTop";
-import ItemList from "./ItemList";
-import BreadcrumbItem from "antd/es/breadcrumb/BreadcrumbItem";
 import JavaLogo from "../resources/Java.png";
-import Profile from "./Profile";
 import CardListFlex from "./CardListFlex";
 const listData = [];
 const Java = {
@@ -49,11 +46,11 @@ listData.push(Misc);
 function Skills() {
     return (
         <ContentMarginTop>
-            <Breadcrumb>
-                <BreadcrumbItem>Portfolio</BreadcrumbItem>
-                <BreadcrumbItem>Skills</BreadcrumbItem>
+            <Breadcrumb style={{ margin: '5px 0' }}>
+                <Breadcrumb.Item>Portfolio</Breadcrumb.Item>
+                <Breadcrumb.Item>Skills</Breadcrumb.Item>
             </Breadcrumb>
-            <CardListFlex list={listData}/>
+            <CardListFlex list={listData} imageWidth={100}/>
         </ContentMarginTop>
     );
 }
