@@ -260,7 +260,7 @@ function Bfs(){
     }
 
     const handleClick = () => {
-        checkInGrid( () => setPlayerPosition(currentHex));
+        checkInGridAndNotObstacle( () => setPlayerPosition(currentHex));
     }
 
     const breadthFirstSearch = (from, to) => {
@@ -303,9 +303,19 @@ function Bfs(){
         }
     }
 
-    const checkInGrid = (callbackOk, callbackError) => {
+    const checkInGridAndNotObstacle = (callbackOk, callbackError) => {
         if(obstacles.filter(obs => areEqualHexes(obs,currentHex)).length === 0 &&
             enableGrid.filter(tile => areEqualHexes(tile,currentHex)).length > 0 ) {
+            callbackOk();
+        } else {
+            if(callbackError) {
+                callbackError();
+            }
+        };
+    }
+
+    const checkInGrid = (callbackOk, callbackError) => {
+        if(enableGrid.filter(tile => areEqualHexes(tile,currentHex)).length > 0 ) {
             callbackOk();
         } else {
             if(callbackError) {
@@ -320,7 +330,7 @@ function Bfs(){
 
     useEffect(() => {
         //getDistanceLine(playerPosition, currentHex);
-        checkInGrid(() => breadthFirstSearch(playerPosition, currentHex),
+        checkInGridAndNotObstacle(() => breadthFirstSearch(playerPosition, currentHex),
             () => printPathToHex());
     }, [playerPosition, currentHex, obstacles]);
 
