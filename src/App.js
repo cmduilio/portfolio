@@ -7,6 +7,7 @@ import Experience from "./components/Experience";
 import HomeHeader from "./components/HomeHeader";
 import Error from "./components/Error";
 import {Layout} from "antd";
+import Pathfinding from "./components/Pathfinding";
 const { Footer } = Layout;
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
                     <Route exact path='/skills' component={Skills}/>
                     <Route exact path='/experience' component={Experience}/>
                     <Route exact path='/error' component={Error}/>
+                    <Route exact path='/pathfinding' component={Pathfinding}/>
                     <Redirect from='/*' to='/error'/>
                 </Switch>
             </BrowserRouter>
