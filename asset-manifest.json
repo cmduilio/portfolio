@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.7ae24f5f.chunk.css",
-    "main.js": "/portfolio/static/js/main.936c31f9.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.936c31f9.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.6f7879d1.chunk.css",
+    "main.js": "/portfolio/static/js/main.e3784bbd.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.e3784bbd.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.209c2d7e.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.209c2d7e.js.map",
     "static/css/2.847e01e0.chunk.css": "/portfolio/static/css/2.847e01e0.chunk.css",
-    "static/js/2.99964b02.chunk.js": "/portfolio/static/js/2.99964b02.chunk.js",
-    "static/js/2.99964b02.chunk.js.map": "/portfolio/static/js/2.99964b02.chunk.js.map",
+    "static/js/2.02772cf6.chunk.js": "/portfolio/static/js/2.02772cf6.chunk.js",
+    "static/js/2.02772cf6.chunk.js.map": "/portfolio/static/js/2.02772cf6.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.11920a88cdd4caf4f816adf68651a3e0.js": "/portfolio/precache-manifest.11920a88cdd4caf4f816adf68651a3e0.js",
+    "precache-manifest.2d4e2f5cebeb59ad3a043b123090695b.js": "/portfolio/precache-manifest.2d4e2f5cebeb59ad3a043b123090695b.js",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/css/2.847e01e0.chunk.css.map": "/portfolio/static/css/2.847e01e0.chunk.css.map",
-    "static/css/main.7ae24f5f.chunk.css.map": "/portfolio/static/css/main.7ae24f5f.chunk.css.map",
-    "static/js/2.99964b02.chunk.js.LICENSE.txt": "/portfolio/static/js/2.99964b02.chunk.js.LICENSE.txt",
+    "static/css/main.6f7879d1.chunk.css.map": "/portfolio/static/css/main.6f7879d1.chunk.css.map",
+    "static/js/2.02772cf6.chunk.js.LICENSE.txt": "/portfolio/static/js/2.02772cf6.chunk.js.LICENSE.txt",
     "static/media/DB.png": "/portfolio/static/media/DB.bdeb43a5.png",
     "static/media/Error.jpg": "/portfolio/static/media/Error.1d613240.jpg",
     "static/media/Java.png": "/portfolio/static/media/Java.a049b5ee.png",
@@ -22,8 +22,8 @@
   "entrypoints": [
     "static/js/runtime-main.209c2d7e.js",
     "static/css/2.847e01e0.chunk.css",
-    "static/js/2.99964b02.chunk.js",
-    "static/css/main.7ae24f5f.chunk.css",
-    "static/js/main.936c31f9.chunk.js"
+    "static/js/2.02772cf6.chunk.js",
+    "static/css/main.6f7879d1.chunk.css",
+    "static/js/main.e3784bbd.chunk.js"
   ]
 }
