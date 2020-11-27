@@ -13,7 +13,7 @@ const { Footer } = Layout;
 function App() {
     return (
         <Layout style={{minHeight:"100vh"}}>
-            <HashRouter basename="/portfolio">
+            <BrowserRouter basename="/portfolio">
                 <HomeHeader content="Mauro Duilio Candotti"/>
                 <Switch>
                     <Route exact path='/' component={Home}/>
@@ -23,7 +23,7 @@ function App() {
                     <Route exact path='/pathfinding' component={Pathfinding}/>
                     <Redirect from='/*' to='/error'/>
                 </Switch>
-            </HashRouter>
+            </BrowserRouter>
             <Footer style={{ color: "lightgrey", alignContent: 'bottom', textAlign: 'center', backgroundColor:"#001529" }}>
                 Maurito Design ©2020 - Para todos los gatitos
             </Footer>

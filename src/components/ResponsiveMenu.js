@@ -4,6 +4,7 @@ import {Link as Linko} from "react-router-dom";
 import "./ResponsiveMenu.css";
 import {MenuOutlined} from "@ant-design/icons";
 import { BackgroundDark } from "../Constants"
+import SubMenu from "antd/es/menu/SubMenu";
 const { Link } = Anchor;
 
 function ResponsiveMenu(){
@@ -25,8 +26,11 @@ function ResponsiveMenu(){
     const menuList = [
         {index: "1", name: "Home", link: "/"},
         {index: "2", name: "Skills", link: "/skills"},
-        {index: "3", name: "Experience", link: "/experience"},
-        {index: "4", name: "Pathfinding", link: "/pathfinding"}];
+        {index: "3", name: "Experience", link: "/experience"}];
+
+    const menuProjects = [{index: "4", name: "Pathfinding", link: "/pathfinding"},
+        {index: "5", name: "Youtube", link: "/youtube"},
+        {index: "6", name: "Google", link: "/google"}];
 
     return (
         <div>
@@ -35,6 +39,12 @@ function ResponsiveMenu(){
                     {menuList.map((element) => {
                         return createMenuItem(element.index, element.name, element.link);
                     })}
+
+                    <SubMenu key="Submenu" title="Projects">
+                        {menuProjects.map((element) => {
+                            return createMenuItem(element.index, element.name, element.link);
+                        })}
+                    </SubMenu>
                 </Menu>
             </div>
             <div className="mobileVisible">
