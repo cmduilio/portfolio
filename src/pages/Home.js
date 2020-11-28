@@ -1,7 +1,7 @@
 import React from 'react';
 import {Breadcrumb, Card, Image} from 'antd';
-import ContentMarginTop from "./ContentMarginTop";
-import CardListFlex from "./CardListFlex";
+import ContentMarginTop from "../components/ContentMarginTop";
+import CardListFlex from "../components/CardListFlex";
 import JavaLogo from "../resources/Java.png";
 import ReactLogo from "../resources/React.png";
 import NodeLogo from "../resources/NodeJs2.png";
@@ -17,6 +17,7 @@ import Icon, {
     TwitterOutlined
 } from '@ant-design/icons';
 import {Option} from "antd/es/mentions";
+import ContactMe from "../components/ContactMe";
 
 /*
 function callLocal() {
@@ -104,6 +105,9 @@ function Home() {
                     "You can find me in...\n"}
                 />
             </Card>
+
+            <ContactMe/>
+
             <CardListFlex list={listData} imageWidth={100}/>
         </ContentMarginTop>
     );

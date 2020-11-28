@@ -1,7 +1,7 @@
 import React from 'react';
 import { Breadcrumb } from 'antd';
-import ContentMarginTop from "./ContentMarginTop";
-import {MemoBfs} from "./bfs/Bfs";
+import ContentMarginTop from "../components/ContentMarginTop";
+import {MemoBfs} from "../components/bfs/Bfs";
 
 function Pathfinding() {
     return (

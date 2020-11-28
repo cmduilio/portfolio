@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
 import {BrowserRouter, Route, Switch, Redirect, HashRouter} from "react-router-dom";
-import Home from "./components/Home";
-import Skills from "./components/Skills";
-import Experience from "./components/Experience";
+import Home from "./pages/Home";
+import Skills from "./pages/Skills";
+import Experience from "./pages/Experience";
 import HomeHeader from "./components/HomeHeader";
 import Error from "./components/Error";
 import {Layout} from "antd";
-import Pathfinding from "./components/Pathfinding";
+import Pathfinding from "./pages/Pathfinding";
 const { Footer } = Layout;
 
 function App() {

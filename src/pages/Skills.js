@@ -1,8 +1,8 @@
 import React from 'react';
 import {Breadcrumb} from 'antd';
-import ContentMarginTop from "./ContentMarginTop";
+import ContentMarginTop from "../components/ContentMarginTop";
 import JavaLogo from "../resources/Java.png";
-import CardListFlex from "./CardListFlex";
+import CardListFlex from "../components/CardListFlex";
 const listData = [];
 const Java = {
     title: "Java",

@@ -24,9 +24,9 @@ function ResponsiveMenu(){
     };
 
     const menuList = [
-        {index: "1", name: "Home", link: "/"},
-        {index: "2", name: "Skills", link: "/skills"},
-        {index: "3", name: "Experience", link: "/experience"}];
+        {index: "1", name: "Home", link: "/"},];
+        //{index: "2", name: "Skills", link: "/skills"},
+        //{index: "3", name: "Experience", link: "/experience"}];
 
     const menuProjects = [{index: "4", name: "Pathfinding", link: "/pathfinding"},
         {index: "5", name: "Youtube", link: "/youtube"},

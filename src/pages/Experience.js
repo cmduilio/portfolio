@@ -1,7 +1,7 @@
 import React from 'react';
 import { Breadcrumb } from 'antd';
-import ContentMarginTop from "./ContentMarginTop";
-import ItemList from "./ItemList";
+import ContentMarginTop from "../components/ContentMarginTop";
+import ItemList from "../components/ItemList";
 import MercadolibreLogo from "../resources/Mercadolibre.jpg";
 import SysoneLogo from "../resources/Sysone.jpg";
 import QWLogo from "../resources/QWork.jpg";
