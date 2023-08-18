@@ -18,6 +18,7 @@ import Icon, {
 } from '@ant-design/icons';
 import {Option} from "antd/es/mentions";
 import ContactMe from "../components/ContactMe";
+import Test from "../components/test/Test";
 
 /*
 function callLocal() {
@@ -90,6 +91,8 @@ function Home() {
             <div style={{ color: "red", display: "block", marginLeft: "auto", marginRight: "auto"}}>
                 DISCLAIMER: THIS IS A WORK IN PROGRESS! Thanks for understanding!
             </div>
+
+            <Test/>
 
             <Card style={{ width:600, display: "block", marginLeft: "auto", marginRight: "auto"}}
                   actions={[

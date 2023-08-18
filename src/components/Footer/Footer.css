@@ -1,0 +1,27 @@
+.footer {
+    border-top: .25rem solid var(--text-title);
+    background-color: var(--bg-primary);
+    height: 5rem;
+    width: 100%;
+    display: block;
+    padding-bottom: 10px;
+    margin: auto;
+}
+
+.footer-icons{
+    margin-top: 10px;
+}
+
+.footer-link{
+    filter: grayscale(50%) opacity(0.7);
+    transition: var(--transition-speed);
+}
+
+.footer-title{
+    color: var(--text-title);
+    margin: auto;
+}
+
+.footer-link:hover{
+    filter: grayscale(0%) opacity(1);
+}

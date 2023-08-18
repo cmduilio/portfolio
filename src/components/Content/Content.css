@@ -1,4 +1,4 @@
-.App {
-  text-align: center;
+.content {
+  color: var(--text-title);
   background-color: var(--bg-primary);
 }

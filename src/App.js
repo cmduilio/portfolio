@@ -1,33 +1,18 @@
 import React from 'react';
+import {BrowserRouter} from "react-router-dom";
 import './App.css';
-import {BrowserRouter, Route, Switch, Redirect, HashRouter} from "react-router-dom";
-import Home from "./pages/Home";
-import Skills from "./pages/Skills";
-import Experience from "./pages/Experience";
-import HomeHeader from "./components/HomeHeader";
-import Error from "./components/Error";
-import {Layout} from "antd";
-import Pathfinding from "./pages/Pathfinding";
-const { Footer } = Layout;
+import Home from "./pages/Home/Home";
 
 function App() {
+    const home = {text: "Home"};
+    const menu = [{id: 1, url: "#about", text: "About me"}, {id: 2, url: "#projects",text: "Projects"}, {id: 3, url: "#experience",text: "Experience"}, {id: 4, url: "#contact",text: "Contact"}]
+
     return (
-        <Layout style={{minHeight:"100vh"}}>
-            <BrowserRouter basename="/portfolio">
-                <HomeHeader content="Mauro Duilio Candotti"/>
-                <Switch>
-                    <Route exact path='/' component={Home}/>
-                    <Route exact path='/skills' component={Skills}/>
-                    <Route exact path='/experience' component={Experience}/>
-                    <Route exact path='/error' component={Error}/>
-                    <Route exact path='/pathfinding' component={Pathfinding}/>
-                    <Redirect from='/*' to='/error'/>
-                </Switch>
+        <div className="App">
+            <BrowserRouter>
+                <Home home={home} menu={menu}/>
             </BrowserRouter>
-            <Footer style={{ color: "lightgrey", alignContent: 'bottom', textAlign: 'center', backgroundColor:"#001529" }}>
-                Maurito Design ©2020 - Para todos los gatitos
-            </Footer>
-        </Layout>
+        </div>
     );
 }
 

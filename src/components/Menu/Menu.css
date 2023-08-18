@@ -1,0 +1,29 @@
+.menu {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--bg-primary);
+}
+
+.item{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    transition: var(--transition-speed);
+}
+
+.item:hover{
+    background-color: var(--bg-button);
+}
+
+@media only screen and (max-width: 750px) {
+    .menu {
+        flex-direction: column;
+        border-bottom: none;
+    }
+}

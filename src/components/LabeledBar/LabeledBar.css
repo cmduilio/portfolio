@@ -1,0 +1,11 @@
+.bar-label{
+    width: 3rem;
+}
+
+.bar-box {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 10px;
+    height: 4rem;
+}

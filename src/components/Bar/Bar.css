@@ -1,0 +1,8 @@
+.growing-bar {
+    background-color: darkred;
+    height: 2rem;
+    width: 10px;
+    transition: 0.7s ease-in-out;
+    margin: 10px;
+    border-radius: 0 10px 10px 0;
+}

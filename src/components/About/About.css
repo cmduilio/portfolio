@@ -1,0 +1,8 @@
+.about{
+    color: var(--text-primary);
+    width: 75vw;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    margin: auto;
+    letter-spacing: 3px;
+}

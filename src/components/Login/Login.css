@@ -1,0 +1,28 @@
+.login-input, .login-submit {
+    border-radius: 25px;
+    text-align: center;
+    outline: none;
+}
+
+.login-input {
+    width: 20rem;
+}
+
+.login-submit {
+    width: 5rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    width: fit-content;
+    margin: auto;
+    background-color: var(--bg-secondary);
+    padding: 10px;
+}
+
+.login-icon {
+    width: 50px;
+}

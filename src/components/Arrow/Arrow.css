@@ -1,0 +1,16 @@
+.slide-arrow {
+    color: purple;
+    cursor: pointer;
+    font-size: 2rem;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.left{
+    margin-right: auto;
+}
+
+.right{
+    margin-left: auto;
+}
